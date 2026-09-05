@@ -1,6 +1,6 @@
 ﻿namespace Departamentos_WF
 {
-    partial class Form1
+    partial class Initial
     {
         /// <summary>
         ///  Required designer variable.
@@ -36,6 +36,7 @@
             btnAtualizaDepartamento = new Button();
             btnExcluirDepartamento = new Button();
             btnIncluirDepartamento = new Button();
+            btnIncluirFuncionario = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDados).BeginInit();
             SuspendLayout();
             // 
@@ -61,13 +62,13 @@
             dgvDados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDados.Location = new Point(12, 71);
             dgvDados.Name = "dgvDados";
-            dgvDados.Size = new Size(478, 309);
+            dgvDados.Size = new Size(478, 166);
             dgvDados.TabIndex = 2;
             // 
             // btnDepartamentos
             // 
             btnDepartamentos.BackColor = Color.Yellow;
-            btnDepartamentos.Location = new Point(12, 396);
+            btnDepartamentos.Location = new Point(12, 255);
             btnDepartamentos.Name = "btnDepartamentos";
             btnDepartamentos.Size = new Size(94, 23);
             btnDepartamentos.TabIndex = 3;
@@ -78,7 +79,7 @@
             // btnDepartamentoPorId
             // 
             btnDepartamentoPorId.BackColor = Color.FromArgb(128, 128, 255);
-            btnDepartamentoPorId.Location = new Point(168, 396);
+            btnDepartamentoPorId.Location = new Point(168, 255);
             btnDepartamentoPorId.Name = "btnDepartamentoPorId";
             btnDepartamentoPorId.Size = new Size(75, 23);
             btnDepartamentoPorId.TabIndex = 4;
@@ -89,7 +90,7 @@
             // btnAtualizaDepartamento
             // 
             btnAtualizaDepartamento.BackColor = Color.Lime;
-            btnAtualizaDepartamento.Location = new Point(330, 396);
+            btnAtualizaDepartamento.Location = new Point(330, 255);
             btnAtualizaDepartamento.Name = "btnAtualizaDepartamento";
             btnAtualizaDepartamento.Size = new Size(75, 23);
             btnAtualizaDepartamento.TabIndex = 5;
@@ -100,7 +101,7 @@
             // btnExcluirDepartamento
             // 
             btnExcluirDepartamento.BackColor = Color.Red;
-            btnExcluirDepartamento.Location = new Point(411, 396);
+            btnExcluirDepartamento.Location = new Point(411, 255);
             btnExcluirDepartamento.Name = "btnExcluirDepartamento";
             btnExcluirDepartamento.Size = new Size(75, 23);
             btnExcluirDepartamento.TabIndex = 6;
@@ -111,7 +112,7 @@
             // btnIncluirDepartamento
             // 
             btnIncluirDepartamento.BackColor = Color.FromArgb(255, 192, 128);
-            btnIncluirDepartamento.Location = new Point(249, 396);
+            btnIncluirDepartamento.Location = new Point(249, 255);
             btnIncluirDepartamento.Name = "btnIncluirDepartamento";
             btnIncluirDepartamento.Size = new Size(75, 23);
             btnIncluirDepartamento.TabIndex = 7;
@@ -119,12 +120,23 @@
             btnIncluirDepartamento.UseVisualStyleBackColor = false;
             btnIncluirDepartamento.Click += btnIncluirDepartamento_Click;
             // 
-            // Form1
+            // btnIncluirFuncionario
+            // 
+            btnIncluirFuncionario.Location = new Point(12, 319);
+            btnIncluirFuncionario.Name = "btnIncluirFuncionario";
+            btnIncluirFuncionario.Size = new Size(118, 23);
+            btnIncluirFuncionario.TabIndex = 8;
+            btnIncluirFuncionario.Text = "Incluir Funcionario";
+            btnIncluirFuncionario.UseVisualStyleBackColor = true;
+            btnIncluirFuncionario.Click += btnIncluirFuncionario_Click;
+            // 
+            // Initial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(502, 440);
+            Controls.Add(btnIncluirFuncionario);
             Controls.Add(btnIncluirDepartamento);
             Controls.Add(btnExcluirDepartamento);
             Controls.Add(btnAtualizaDepartamento);
@@ -133,7 +145,7 @@
             Controls.Add(dgvDados);
             Controls.Add(txtUrl);
             Controls.Add(lblUrl);
-            Name = "Form1";
+            Name = "Initial";
             Text = "Gerenciamento de Departamentos";
             ((System.ComponentModel.ISupportInitialize)dgvDados).EndInit();
             ResumeLayout(false);
@@ -150,5 +162,6 @@
         private Button btnAtualizaDepartamento;
         private Button btnExcluirDepartamento;
         private Button btnIncluirDepartamento;
+        private Button btnIncluirFuncionario;
     }
 }

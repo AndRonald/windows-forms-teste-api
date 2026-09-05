@@ -3,10 +3,10 @@ using Departamentos_WF.Service;
 
 namespace Departamentos_WF
 {
-    public partial class Form1 : Form
+    public partial class Initial : Form
     {
         private AcessaAPIService? _apiService;
-        public Form1()
+        public Initial()
         {
             InitializeComponent();
             InitializeApiService();
@@ -69,13 +69,13 @@ namespace Departamentos_WF
                 try
                 {
                     Departamento? departamento = await _apiService!.GetDepartamentoById(codigoDepartamento);
-                    
-                    if (departamento != null) 
+
+                    if (departamento != null)
                     {
                         dgvDados.DataSource = new List<Departamento> { departamento };
                         FormatarGridDepartamento();
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show($"Departamento com código {codigoDepartamento} não encontrado");
                         btnDepartamentoPorId.PerformClick();
@@ -91,7 +91,7 @@ namespace Departamentos_WF
         private async void btnIncluirDepartamento_Click(object sender, EventArgs e)
         {
             if (!VerificarApiService()) return;
-            try 
+            try
             {
                 var novoDepartamento = new Departamento
                 {
@@ -109,7 +109,7 @@ namespace Departamentos_WF
 
                 btnDepartamentos.PerformClick();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
@@ -117,9 +117,9 @@ namespace Departamentos_WF
 
         private async void btnAtualizaDepartamento_Click(object sender, EventArgs e)
         {
-            if(InputBox(out int codigoDepartamento)) 
+            if (InputBox(out int codigoDepartamento))
             {
-                try 
+                try
                 {
                     var departamentoAtualizado = new Departamento
                     {
@@ -128,9 +128,9 @@ namespace Departamentos_WF
                         Descricao = "Descrição atualizada via WinForms"
                     };
 
-                    await _apiService!.UpdateDepartamento(codigoDepartamento,departamentoAtualizado);
+                    await _apiService!.UpdateDepartamento(codigoDepartamento, departamentoAtualizado);
 
-                    MessageBox.Show($"Departamento com ID {codigoDepartamento} foi atualizado com sucesso!", 
+                    MessageBox.Show($"Departamento com ID {codigoDepartamento} foi atualizado com sucesso!",
                                     "Sucesso",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
@@ -148,7 +148,7 @@ namespace Departamentos_WF
         {
             if (!VerificarApiService()) return;
 
-            if(InputBox(out int codigoDepartamento)) 
+            if (InputBox(out int codigoDepartamento))
             {
                 try
                 {
@@ -175,6 +175,12 @@ namespace Departamentos_WF
 
             codigo = -1;
             return false;
+        }
+
+        private void btnIncluirFuncionario_Click(object sender, EventArgs e)
+        {
+            var incluirFuncionarioForm = new Forms.Funcionarios.IncluirFuncionario();
+            incluirFuncionarioForm.ShowDialog();
         }
     }
 }
