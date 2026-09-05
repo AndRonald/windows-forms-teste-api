@@ -78,7 +78,7 @@
             // btnDepartamentoPorId
             // 
             btnDepartamentoPorId.BackColor = Color.FromArgb(128, 128, 255);
-            btnDepartamentoPorId.Location = new Point(126, 396);
+            btnDepartamentoPorId.Location = new Point(168, 396);
             btnDepartamentoPorId.Name = "btnDepartamentoPorId";
             btnDepartamentoPorId.Size = new Size(75, 23);
             btnDepartamentoPorId.TabIndex = 4;
@@ -89,7 +89,7 @@
             // btnAtualizaDepartamento
             // 
             btnAtualizaDepartamento.BackColor = Color.Lime;
-            btnAtualizaDepartamento.Location = new Point(316, 396);
+            btnAtualizaDepartamento.Location = new Point(330, 396);
             btnAtualizaDepartamento.Name = "btnAtualizaDepartamento";
             btnAtualizaDepartamento.Size = new Size(75, 23);
             btnAtualizaDepartamento.TabIndex = 5;
@@ -111,7 +111,7 @@
             // btnIncluirDepartamento
             // 
             btnIncluirDepartamento.BackColor = Color.FromArgb(255, 192, 128);
-            btnIncluirDepartamento.Location = new Point(221, 396);
+            btnIncluirDepartamento.Location = new Point(249, 396);
             btnIncluirDepartamento.Name = "btnIncluirDepartamento";
             btnIncluirDepartamento.Size = new Size(75, 23);
             btnIncluirDepartamento.TabIndex = 7;
